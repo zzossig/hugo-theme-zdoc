@@ -1,0 +1,64 @@
+.home {
+  &__landing {
+    width: 100%;
+    height: 600px;
+    
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+
+    @media only screen and (max-width: 600px) {
+      @include flex-direction(column);
+    }
+
+    &--img {
+      margin: 0.5rem;
+    }
+
+    &--txt {
+      margin: 0.5rem;
+      .title {
+        font-size: 44px;
+        font-family: $title-font;
+      }
+
+      .text {
+        font-size: 22px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        text-align: center;
+      }
+    }
+
+    &--link {
+      text-decoration: none !important;
+    }
+  }
+
+  &__social {
+    width: 100%;
+    padding: 1rem 0;
+
+    @include flexbox();
+    @include justify-content(center);
+
+    &--item {
+      margin: 0 0.25rem;
+    }
+  }
+
+  &__banner {
+    width: 100%;
+    padding: 0.75rem;
+
+    @include flexbox();
+    @include justify-content(center);
+
+    &--wrapper {
+      @include themify($themes) {
+        background-color: themed('banner-background-color');
+      }
+    }
+  }
+}

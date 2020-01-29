@@ -1,0 +1,16 @@
+{{ if $.Param "enableFooter" }}
+<div class="bot">
+  <footer class="footer">
+    <div class="divider">
+      <div class="lmr">
+        <p class="caption">
+          {{ with $.Site.Copyright }}{{ replace . "{year}" now.Year | markdownify}}{{ end }}
+        </p>
+        {{ if $.Param "showPoweredBy" }}
+            <p class="caption">Powered by <a href="https://gohugo.io/" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" rel="noreferrer">zDoc theme</a></p>
+        {{ end }}
+      </div>
+    </div>
+  </footer>
+</div>
+{{ end }}

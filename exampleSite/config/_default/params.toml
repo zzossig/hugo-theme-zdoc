@@ -1,0 +1,24 @@
+logo = true
+logoText = "ZDoc"
+logoType = "short" # long, short
+description = "The ZDoc theme for Hugo example site."
+
+themeOptions = ["light", "dark"]
+
+useFaviconGenerator = true # https://www.favicon-generator.org/
+
+enableSearch = true
+enableLangChange = true
+enableDarkMode = true
+enableBreadcrumb = true
+enableToc = true
+enableMenu = true
+enableNavbar = true
+enableFooter = true
+showPoweredBy = true
+
+paginateWindow = 1
+taxoPaginate = 13
+taxoGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
+
+github = "https://github.com/zzossig/hugo-theme-zzo"

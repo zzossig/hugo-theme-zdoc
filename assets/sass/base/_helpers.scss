@@ -1,0 +1,17 @@
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.hide {
+  display: none;
+}
+
+.grow {
+  @include flex-grow(1);
+}

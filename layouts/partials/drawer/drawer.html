@@ -1,0 +1,32 @@
+<div id="myDrawer" class="drawer">
+  <div class="drawer__header">
+    <div class="drawer__header--text">
+      {{ .Site.Params.logoText }}
+    </div>
+    <div class="grow"></div>
+    <div class="drawer__close">
+      {{ partial "svgs/close.svg" (dict "width" 22 "height" 22) }}
+    </div>
+  </div>
+
+  <div class="drawer__body">
+    {{ partial "main/sections/list-menu.html" . }}
+  </div>
+</div>
+<div id="myModal" class="modal"></div>
+
+<script>
+  var isDrawerOpen = localStorage.getItem('isDrawerOpen');
+  var modal = document.getElementById("myModal");
+  var drawer = document.getElementById('myDrawer');
+
+  var openDrawer = function () {
+    modal.style.left = 0;
+    modal.style.opacity = 1;
+    drawer.style.left = 0;
+  }
+
+  if (isDrawerOpen && isDrawerOpen === 'true') {
+    openDrawer();
+  }
+</script>

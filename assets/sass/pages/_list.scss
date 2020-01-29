@@ -1,0 +1,19 @@
+#list-main {
+  display: flex;
+  flex-direction: column;
+  @include themify($themes) {
+    background-color: themed('body-background-color');
+  }
+}
+
+#list-menu {
+  @include themify($themes) {
+    border-right: 1px solid themed('border-line-color');
+  }
+}
+
+#list-side {
+  @include themify($themes) {
+    border-left: 1px solid themed('border-line-color');
+  }
+}

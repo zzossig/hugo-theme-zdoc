@@ -1,0 +1,13 @@
+<div class="top">
+  <header class="header home__banner--wrapper">
+    <div class="divider">
+      <div class="lmr">
+        <div class="home__banner">
+          {{ if $.Param "updatesBanner" }}
+            {{ ($.Param "updatesBanner") | markdownify }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </header>
+</div>

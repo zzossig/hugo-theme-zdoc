@@ -1,0 +1,22 @@
+{{ if or .PrevInSection .NextInSection }}
+<div class="grow"></div>
+<nav class="pagination-single">
+  {{ if .NextInSection }}
+    <div class="pagination-single__icon">
+      {{ partial "svgs/arrow-back.svg" (dict "width" 22 "height" 22) }}
+    </div>
+    <a href="{{ .NextInSection.Permalink }}" title="{{ .NextInSection.Title }}" class="pagination-single__right">      
+      <div class="pagination-single__right-title">{{ .NextInSection.Title }}</div>
+    </a>
+  {{ end }}
+  <div class="grow"></div>
+  {{ if .PrevInSection }}
+    <a href="{{ .PrevInSection.Permalink }}" title="{{ .PrevInSection.Title }}" class="pagination-single__left">
+      <div class="pagination-single__left-title">{{ .PrevInSection.Title }}</div>
+      <div class="pagination-single__icon">
+        {{ partial "svgs/arrow-forward.svg" (dict "width" 22 "height" 22) }}
+      </div>
+    </a>
+  {{ end }}
+</nav>
+{{ end }}

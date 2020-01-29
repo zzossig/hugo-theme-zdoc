@@ -1,0 +1,39 @@
+.header {
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
+  @include flex-direction(column);
+
+  .title {
+    font-family: $title-font;
+    font-weight: 900;
+  }
+}
+
+.blog-header {
+  @include flexbox();
+  @include justify-content(center);
+  @include flex-direction(column);
+
+  &__title {
+    line-height: 1.1;
+    font-weight: 700;
+    font-family: $title-font;
+  }
+
+  &__subtitle {
+    line-height: 1.2;
+  }
+
+  &__align-left {
+    @include align-items(flex-start);
+  }
+
+  &__align-center {
+    @include align-items(center);
+  }
+
+  &__align-right {
+    @include align-items(flex-end);
+  }
+}

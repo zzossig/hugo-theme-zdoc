@@ -1,0 +1,58 @@
+{{ define "main" }}
+<div class="top">
+  <header class="main">
+    <div class="sv" data-view="full">
+      {{ partial "header/taxo-header.html" . }}
+    </div>
+  </header>
+</div>
+<div class="mid">
+  <main class="main">
+    <div class="sv" data-view="full">
+      {{ $paginator := .Paginate (.Pages.GroupByDate (.Site.Params.taxoGroupByDate | default "2006")) .Site.Params.taxoPaginate }}
+      
+      {{ range ($paginator).PageGroups }}
+        <span class="taxo__key">{{ .Key }}</span>
+        <ul class="taxo__ul">
+          {{ range .Pages }}
+          <li class="taxo__li">
+            <a href="{{ .Permalink }}" class="taxo__title">{{ .Title }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+
+      {{ partial "main/component/pagination.html" . }}
+    </div>
+
+  </main>
+</div>
+
+<script>
+  var singleViewElem = document.querySelectorAll('.sv');
+
+  enquire.register("screen and (max-width:1280px)", {
+    match: function () {
+      singleViewElem.forEach(function (elem) {
+        elem.setAttribute('data-view', 'full');
+      });
+    },
+    unmatch: function () {
+      singleViewElem.forEach(function (elem) {
+        elem.setAttribute('data-view', 'full');
+      });
+    },
+  }).register("screen and (max-width:769px)", {
+    match: function () {
+      singleViewElem.forEach(function (elem) {
+        elem.setAttribute('data-view', 'mobile');
+      });
+    },
+    unmatch: function () {
+      singleViewElem.forEach(function (elem) {
+        elem.setAttribute('data-view', 'full');
+      });
+    },
+  });
+</script>
+{{ end }}

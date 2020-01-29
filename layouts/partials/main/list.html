@@ -1,0 +1,63 @@
+<div class="mid">
+  <div class="divider">
+
+    <nav id="list-menu" class="l">
+      {{ if $.Param "enableMenu" }}
+        {{ partial "main/sections/list-menu.html" . }}
+      {{ end }}
+    </nav>
+
+    <article id="list-main" class="m">
+      {{ if $.Param "enableBreadcrumb" }}
+        {{ partial "main/component/breadcrumb.html" . }}
+      {{ end }}
+      {{ partial "main/sections/list-main.html" . }}
+      {{ partial "main/component/pagination-single.html" . }}
+    </article>
+
+    <section id="list-side" class="r">
+    </section>
+
+  </div>
+</div>
+
+<script>
+  var listSide = document.getElementById('list-side');
+  var listMain = document.getElementById('list-main');
+  var listMenu = document.getElementById('list-menu');
+  
+  enquire.register("screen and (max-width:1280px)", {
+    match: function () {
+      listSide.className = 'r';
+      listMain.className = 'm';
+      listMenu.className = 'l';
+    },
+    unmatch: function () {
+      listSide.className = 'r';
+      listMain.className = 'm';
+      listMenu.className = 'l';
+    },
+  }).register("screen and (max-width:960px)", {
+    match: function () {
+      listSide.className = 'hide';
+      listMain.className = 'mr';
+      listMenu.className = 'l';
+    },
+    unmatch: function () {
+      listSide.className = 'r';
+      listMain.className = 'm';
+      listMenu.className = 'l';
+    },
+  }).register("screen and (max-width:600px)", {
+    match: function () {
+      listSide.className = 'hide';
+      listMain.className = 'lmr';
+      listMenu.className = 'hide';
+    },
+    unmatch: function () {
+      listSide.className = 'hide';
+      listMain.className = 'mr';
+      listMenu.className = 'l';
+    },
+  });
+</script>

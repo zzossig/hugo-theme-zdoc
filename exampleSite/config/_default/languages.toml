@@ -1,0 +1,9 @@
+[en]
+  title = "ZDoc"
+  languageName = "English"
+  weight = 1
+
+[ko]
+  title = "ZDoc"
+  languageName = "한국어"
+  weight = 2

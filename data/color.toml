@@ -1,0 +1,8 @@
+dark_active_font_color = "#aed581"
+dark_link_color = "#FFD866"
+dark_link_hover_color = "#FF6188"
+
+
+light_active_font_color = "#0071bc"
+light_link_color = "#1565c0"
+light_link_hover_color = "#379fef"
