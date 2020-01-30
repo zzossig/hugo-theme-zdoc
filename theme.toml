@@ -1,6 +1,6 @@
 name = "Zzo"
 description = "Simple Hugo documentation theme."
-homepage = "https://github.com/zzossig/hugo-theme-zdoc"
+homepage = "https://zzodocs.netlify.com"
 license = "MIT"
 licenselink = "https://github.com/zzossig/hugo-theme-zdoc/blob/master/LICENSE.md"
 tags = ["accessible", "multilingual", "responsive", "documentation", "search", "simple", "light", "dark", "mobile"]
