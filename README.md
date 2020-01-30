@@ -213,12 +213,12 @@ The content here is appeared when you click the manu. So called overview page.
 
     ```yaml
     ---
-  title: "Content Formats"
-  description: "test post"
-  date: 2020-01-28T00:38:51+09:00
-  draft: false
-  weight: 1
-  ---
+    title: "Content Formats"
+    description: "test post"
+    date: 2020-01-28T00:38:51+09:00
+    draft: false
+    weight: 1
+    ---
 
   *Markdown here*
 
@@ -229,7 +229,7 @@ The content here is appeared when you click the manu. So called overview page.
     `root/content/doc/gettingstarted/_index.md`
 
     ```yaml
-      ---
+    ---
     title: "Getting started"
     description: "test post index"
     date: 2020-01-28T00:36:39+09:00
@@ -245,7 +245,7 @@ The content here is appeared when you click the manu. So called overview page.
 - Make more pages in the collapsible section. Something like `Getting Started`, `Installation`, `Basic usage`, etc... For example, make a file at `root/content/doc/gettingstarted/installation.md`
 
     ```yaml
-      ---
+    ---
     title: "Frontmatter"
     description: "test post"
     date: 2020-01-28T00:36:14+09:00

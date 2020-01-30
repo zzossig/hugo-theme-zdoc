@@ -5,8 +5,6 @@
 	"uri": "{{ $page.Permalink }}",
 	"title": "{{ htmlEscape $page.Title}}",
 	"tags": [{{ range $tindex, $tag := $page.Params.tags }}{{ if $tindex }}, {{ end }}"{{ $tag| htmlEscape }}"{{ end }}],
-	"categories": [{{ range $cindex, $category := $page.Params.categoris }}{{ if $cindex }}, {{ end }}"{{ $category| htmlEscape }}"{{ end }}],
-	"series": [{{ range $sindex, $series := $page.Params.series }}{{ if $sindex }}, {{ end }}"{{ $series| htmlEscape }}"{{ end }}],
 	"description": "{{ htmlEscape .Description}}",
 	"content": {{$page.Plain | jsonify}}
 }

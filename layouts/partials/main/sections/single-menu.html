@@ -20,16 +20,18 @@
         </span>
         <ul class="menu__list {{ if and (in $currentURL .Permalink) (eq $sectionName1 $sectionName2) }}active{{ end }}">
           {{ range .Pages.ByWeight }}
-            {{ $lastUrlElement := index (last 1 (split (delimit (split .Permalink "/") "," "") ",")) 0 }}
+            {{ $lastUrlElement1 := index (last 1 (split (delimit (split .Permalink "/") "," "") ",")) 0 }}
+            {{ $lastUrlElement2 := index (last 1 (split (delimit (split $currentURL "/") "," "") ",")) 0 }}
             <li>
-              <a href="{{ .Permalink }}" class="menu__title {{ if and (in $currentURL $lastUrlElement) (eq $sectionName1 $sectionName2) }}active{{ end }}">{{ .Title }}</a>
+              <a href="{{ .Permalink }}" class="menu__title {{ if and (eq $lastUrlElement1 $lastUrlElement2) (eq $sectionName1 $sectionName2) }}active{{ end }}">{{ .Title }}</a>
             </li>
           {{ end }}
         </ul>
       {{ else }}
-        {{ $lastUrlElement := index (last 1 (split (delimit (split .Permalink "/") "," "") ",")) 0 }}
-        <li class="{{ if and (in $currentURL $lastUrlElement) (eq $sectionName1 $sectionName2) }}active{{ end }}">
-          <a href="{{ .Permalink }}" class="menu__title {{ if and (in $currentURL $lastUrlElement) (eq $sectionName1 $sectionName2) }}active{{ end }}">{{ .Title }}</a>
+        {{ $lastUrlElement1 := index (last 1 (split (delimit (split .Permalink "/") "," "") ",")) 0 }}
+        {{ $lastUrlElement2 := index (last 1 (split (delimit (split $currentURL "/") "," "") ",")) 0 }}
+        <li class="{{ if and (in $lastUrlElement1 $lastUrlElement2) (eq $sectionName1 $sectionName2) }}active{{ end }}">
+          <a href="{{ .Permalink }}" class="menu__title {{ if and (in $lastUrlElement1 $lastUrlElement2) (eq $sectionName1 $sectionName2) }}active{{ end }}">{{ .Title }}</a>
         </li>
       {{ end }}
     {{ end }}
