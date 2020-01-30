@@ -2,10 +2,10 @@
 <div class="grow"></div>
 <nav class="pagination-single">
   {{ if .NextInSection }}
-    <div class="pagination-single__icon">
-      {{ partial "svgs/arrow-back.svg" (dict "width" 22 "height" 22) }}
-    </div>
-    <a href="{{ .NextInSection.Permalink }}" title="{{ .NextInSection.Title }}" class="pagination-single__right">      
+    <a href="{{ .NextInSection.Permalink }}" title="{{ .NextInSection.Title }}" class="pagination-single__right">
+      <div class="pagination-single__icon">
+        {{ partial "svgs/arrow-back.svg" (dict "width" 22 "height" 22) }}
+      </div>
       <div class="pagination-single__right-title">{{ .NextInSection.Title }}</div>
     </a>
   {{ end }}

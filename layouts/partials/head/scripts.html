@@ -13,6 +13,25 @@
   "use strict";
 
   window.onload = function() {
+    // ========================== expand ==========================
+    var expandBtn = document.querySelectorAll('.expand__button');
+
+    for (let i = 0; i < expandBtn.length; i++) {
+      expandBtn[i].addEventListener("click", function () {
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          this.querySelector('svg').classList.add('expand-icon__right');
+          this.querySelector('svg').classList.remove('expand-icon__down');
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          this.querySelector('svg').classList.remove('expand-icon__right');
+          this.querySelector('svg').classList.add('expand-icon__down');
+        }
+      });
+    }
+    // ============================================================
+    
     // ======================= toggle theme =======================
     var root = document.getElementById('root');
     var toggleToLightBtn = document.getElementById('toggleToLight');
@@ -44,7 +63,6 @@
       elem.addEventListener('click', function (e) {
         var content = this.nextElementSibling;
         var menuTitleIcon = this.querySelector('.menu__title--icon');
-        console.log(menuTitleIcon);
         if (!content) {
           return null;
         }
