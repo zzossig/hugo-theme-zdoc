@@ -1,6 +1,6 @@
 ## Zdoc theme for Hugo
 
-Thank you for click me!. Zdoc theme is a simple documentation theme powered by Hugo1
+Thank you for click me!. Zdoc theme is a simple documentation theme powered by Hugo
 
 ## Table of contents
 
