@@ -4,7 +4,7 @@
   left: -100%;
   z-index: z('drawer');
   width: $drawer-width;
-  height: 100vh;
+  height: 100%;
 
   @include themify($themes) {
     background-color: themed('body-background-color');
@@ -32,8 +32,9 @@
   }
 
   &__body {
-    height: calc(100vh - $grid-nav-height);
+    height: 100%;
     width: 100%;
+    overflow-y: auto;
   }
 
   &__close {

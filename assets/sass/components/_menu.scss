@@ -10,6 +10,10 @@
   overflow-y: auto;
   z-index: z('menu');
 
+  @media only screen and (max-width: 600px) {
+    top: 0;
+  }
+
   &__label {
     font-family: $title-font;
     font-size: 1rem;
