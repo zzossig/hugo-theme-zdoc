@@ -6,6 +6,7 @@
   width: $drawer-width;
   height: 100%;
 
+  @include transition(all, 0.3s, ease-out);
   @include themify($themes) {
     background-color: themed('body-background-color');
   }
