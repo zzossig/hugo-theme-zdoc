@@ -188,7 +188,7 @@ paginateWindow = 1 # setting it to 1 gives 7 buttons, 2 gives 9, etc. If set 1: 
 taxoPaginate = 13 # items per page
 taxoGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
 
-github = "https://github.com/zzossig/hugo-theme-zzo"
+github = "https://github.com/zzossig/hugo-theme-zdoc"
 ```
 
 ## How to make doc
