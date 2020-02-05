@@ -3,8 +3,8 @@ title = "Hugo Zdoc Theme"
 theme = "zdoc"
 
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
-hasCJKLanguage = true
+defaultContentLanguageInSubdir = false
+hasCJKLanguage = false
 
 copyright = "&copy;{year}, All Rights Reserved"
 timeout = 10000
