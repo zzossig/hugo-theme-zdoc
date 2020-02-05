@@ -13,7 +13,7 @@ titleColor:
 textColor:
 spaceBetweenTitleText: 25
 buttons:
-  - link: /docs/gettingstarted/quickstart
+  - link: docs/gettingstarted/quickstart
     text: GET STARTED
     color: primary
   - link: https://github.com/zzossig/hugo-theme-zdoc
