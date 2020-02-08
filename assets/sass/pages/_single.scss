@@ -6,10 +6,17 @@
 
 .single {
   padding: 0 1rem;
-  display: block;
   position: relative;
   width: 100%;
   overflow-wrap: break-word;
+
+  &[data-display="block"] {
+    display: block;
+  }
+
+  &[data-display="none"] {
+    display: none;
+  }
 
   &__title {
     font-size: 2.5rem;

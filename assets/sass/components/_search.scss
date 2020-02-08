@@ -67,6 +67,82 @@
       color: themed('search-highlight-color');
     }
   }
+
+  &-result {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 8px);
+    z-index: z('navbar');
+    margin: 4px 0;
+
+    @include themify($themes) {
+      background-color: themed('body-background-color');
+    }
+
+    &[data-display="block"] {
+      display: block;
+    }
+
+    &[data-display="none"] {
+      display: none;
+    }
+
+    &__header {
+    }
+
+    &__close {
+      position: absolute;
+      right: 0.25rem;
+      top: 0.25rem;
+      cursor: pointer;
+
+      @include themify($themes) {
+        color: themed('body-color');
+        @include on-event {
+          color: themed('active-font-color');
+        }
+      }
+    }
+
+    &__body {
+      margin-top: 2.25rem;
+      padding: 0 1rem;
+      position: relative;
+      display: block;
+      overflow: auto;
+      height: calc(100% - 3rem);
+
+      @include themify($themes) {
+        @include moz-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
+        @include webkit-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
+      }
+    }
+
+    &__item {
+      padding: 1rem 0;
+
+      @include themify($themes) {
+        border-bottom: 2px dashed themed('hr-color');
+
+        &--title {
+          font-family: $title-font;
+          font-size: 1rem;
+          margin: 0.25rem 0;
+          color: themed('title-color');
+
+          &::before {
+            content: "📋 ";
+          }
+        }
+
+        &--desc {
+          font-size: 0.9rem;
+          margin: 0.25rem 0;
+          color: themed('body-color');
+        }
+      }
+    }
+  }
 }
 
 .menu-item {
@@ -94,6 +170,8 @@
 #search-results {
   &.dd {
     display: none;
+    z-index: z('navbar');
+
     &.is-active {
       display: inline-block;
       position: absolute;
@@ -123,7 +201,9 @@
     &-item {
       width: 100%;
       font-size: 1rem;
-      padding: 0.125rem;
+      padding: 0.35rem 0.6rem;
+
+
       @include on-event {
         @include themify($themes) {
           background-color: themed('search-hover-background-color');
@@ -242,6 +322,8 @@
 
   &__item {   
     padding: 0.5rem;   
+    list-style-type: none;
+
     &--title {
       font-size: 1.2rem;      
       @include themify($themes) {
@@ -253,7 +335,6 @@
       font-size: 0.9rem;
       padding: 0.25rem 0.5rem;
       
-      @include truncate(960px);
       @include themify($themes) {
         color: themed('search-color');
       }
