@@ -35,6 +35,7 @@ $light-link-hover-color: {{ .Site.Data.color.light_link_hover_color }};
 @import 'components/button';
 @import 'components/summary';
 @import 'components/expand';
+@import 'components/bgcolor';
 
 @import 'layout/grid';
 @import 'layout/footer';

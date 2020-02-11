@@ -1,10 +1,10 @@
 <div class="single" data-display="block">
-  <h2 class="single__title">{{ .Title }}</h2>
   {{ if eq .Type "blog" }}
     <div class="single__meta">
       {{ partial "main/component/article-meta.html" . }}
     </div>
   {{ end }}
+
   <article class="single__contents">
     {{ .Content }}
   </article>

@@ -1,12 +1,8 @@
 .breadcrumb {
-  margin: 1.5rem 1rem 0 1rem;
-  padding-bottom: 1.5rem;
+  margin: 0 1rem;
+  padding: 0.5rem 0;
 
   @include truncate($grid-body-width);
-  @include themify($themes) {
-    border-bottom: 1px solid themed('hr-color');
-    background-color: themed('breadcrumb-background-color');
-  }
 
   ol {
     @include flexbox();

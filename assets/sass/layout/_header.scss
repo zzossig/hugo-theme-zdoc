@@ -1,3 +1,9 @@
+.top {
+  @include themify($themes) {
+    background-color: themed('single-header-title-background-color');
+  }
+}
+
 .header {
   @include flexbox();
   @include justify-content(center);
@@ -7,6 +13,12 @@
   .title {
     font-family: $title-font;
     font-weight: 900;
+  }
+
+  &__wrapper {
+    @include themify($themes) {
+      border-bottom: 1px solid themed('border-line-color');
+    }
   }
 }
 

@@ -8,9 +8,6 @@
     </nav>
 
     <article id="list-main" class="m">
-      {{ if $.Param "enableBreadcrumb" }}
-        {{ partial "main/component/breadcrumb.html" . }}
-      {{ end }}
       {{ partial "main/sections/list-main.html" . }}
       {{ partial "main/component/pagination-single.html" . }}
     </article>

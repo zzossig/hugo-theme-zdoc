@@ -197,7 +197,7 @@
       @include align-items(center);
       @include justify-content(center);
       @include themify($themes) {
-        color: themed('body-color');
+        color: themed('landing-button-default');
         @include on-event {
           background-color: themed('dropdown-hover-background-color');
         }

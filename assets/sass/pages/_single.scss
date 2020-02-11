@@ -5,7 +5,6 @@
 }
 
 .single {
-  padding: 0 1rem;
   position: relative;
   width: 100%;
   overflow-wrap: break-word;
@@ -19,13 +18,13 @@
   }
 
   &__title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 900;
     font-family: $title-font;
     line-height: 3rem;
     overflow-wrap: break-word;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 0;
 
     @include themify($themes) {
       color: themed("single-header-title-color");
@@ -76,12 +75,12 @@
     h6 {
       position: relative;      
       line-height: 1.25;
+      padding: 0 1rem;
       font-family: $title-font;
     }
 
     h1,
     h2 {
-      padding: 0;
       color: inherit;
       font-weight: 900;
       text-rendering: optimizeLegibility; 
@@ -136,8 +135,8 @@
       line-height: 1.5;
 
       @include themify($themes) {
-        border-top: 1px solid themed('hr-color');
-        border-bottom: 1px solid themed('hr-color');
+        border-top: 1px solid themed('border-line-color');
+        border-bottom: 1px solid themed('border-line-color');
 
         @include webkit-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
         @include moz-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
@@ -164,59 +163,6 @@
       @include themify($codeblock) {
         color: themed('content-code-color');
       }
-    }
-
-    code + .copy-to-clipboard {
-      position: absolute;
-      right: 4px;
-      top: 5px;
-      border-radius: 2px;
-      z-index: z('clipboard');
-      @include transition(all, 0.2s, ease);
-    }
-
-    .copy-to-clipboard {
-      background-position: 50% 50%;
-      background-size: 16px 16px;
-      background-repeat: no-repeat;
-      width: 27px;
-      height: 1.45rem;
-      top: -1px;
-      vertical-align: middle;
-      position: relative;      
-      margin-left: -0.2rem;
-      cursor: pointer;
-      border-radius: 0 2px 2px 0;
-      margin-bottom: 1px;
-      opacity: 0;
-
-      @include clippy();
-      @include transition(all, 0.2s, ease);
-    }
-    .copy-to-clipboard:hover {
-      @include translateY(-0.1rem);
-    }
-    .chroma .copy-to-clipboard {
-      position: absolute;
-      right: 4px;
-      top: 5px;      
-      border-radius: 2px;
-      z-index: z('clipboard');
-      @include transition(all, 0.2s, ease);
-    }
-    .chroma .copy-to-clipboard:hover {
-      @include translateY(-0.1rem);
-    }
-    .language-code .copy-to-clipboard {
-      position: absolute;
-      right: 4px;
-      top: 5px;      
-      border-radius: 2px;
-      z-index: z('clipboard');
-      @include transition(all, 0.2s, ease);
-    }
-    .language-code .copy-to-clipboard:hover {
-      @include translateY(-0.1rem);
     }
 
     blockquote {
@@ -248,8 +194,8 @@
     }
 
     p {
-      margin: 0 0 1rem 0;
-      padding: 0;      
+      margin: 0 0 10px 0;
+      padding: 0 1rem;      
 
       code:not([class^=language]) {
         padding: 3px 7px;
@@ -269,7 +215,6 @@
 
     li {
       margin-left: 2rem;
-      margin-bottom: calc(1rem / 2);
 
       & > code {
         padding: 2px 7px;
@@ -283,8 +228,7 @@
     }
 
     hr {
-      margin: 0 0 calc(1.25rem - 1px) 0;
-      padding: 0;
+      margin: 10px 1rem;
       border: none;
       height: 1px;
       @include themify($themes) {
