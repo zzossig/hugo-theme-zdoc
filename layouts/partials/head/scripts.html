@@ -13,6 +13,26 @@
   "use strict";
 
   window.onload = function() {
+    // ===================== navbar collapse ======================
+    var navCollapseBtn = document.getElementById('navCollapseBtn');
+    navCollapseBtn ? navCollapseBtn.addEventListener('click', function(e) {
+      var navCollapse = document.querySelector('.navbar__collapse');
+      
+      if (navCollapse) {
+        var dataOpen = navCollapse.getAttribute('data-open');
+
+        if (dataOpen === 'true') {
+          navCollapse.setAttribute('data-open', 'false');
+          navCollapse.style.maxHeight = 0;
+        } else {
+          navCollapse.setAttribute('data-open', 'true');
+          navCollapse.style.maxHeight = navCollapse.scrollHeight + "px";
+        }
+      }
+    }) : null;
+    // ============================================================
+
+
     // ========================== expand ==========================
     var expandBtn = document.querySelectorAll('.expand__button');
 

@@ -7,6 +7,7 @@
   ol {
     @include flexbox();
     @include align-items(center);
+    @include flex-wrap(wrap);
   }
 
   li {

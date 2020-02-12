@@ -4,6 +4,7 @@
 .navbar {
   padding: 0 0.75rem;
   height: 100%;
+  position: relative;
 
   @include flexbox();
   @include align-items(center);
@@ -66,6 +67,7 @@
 
     &--mobile-item {
       width: 100%;
+
       @include flexbox();
       @include align-items(center);
       @include justify-content(flex-start);
@@ -78,6 +80,7 @@
       & > a {
         width: 100%;
         font-size: 18px;
+        padding: 0.5rem;
         
         @include themify($themes) {
           color: themed('body-color');
@@ -199,6 +202,7 @@
       @include themify($themes) {
         color: themed('landing-button-default');
         @include on-event {
+          color: themed('body-color');
           background-color: themed('dropdown-hover-background-color');
         }
 
@@ -238,12 +242,34 @@
       outline: none;
       margin-left: 1rem;
       height: $grid-nav-height;
+      cursor: pointer;
 
       @include flexbox();
       @include align-items(center);
       @include themify($themes) {
         color: themed('body-color');
         background-color: themed('navbar-background-color');
+      }
+    }
+  }
+
+  &__collapse {
+    width: 100%;
+    position: absolute;
+    top: $grid-nav-height;
+    left: 0;
+    max-height: 0;
+    overflow: hidden;
+
+    @include transition(all, 0.15s, ease-out);
+    @include themify($themes) {
+      background-color: themed('navbar-background-color');
+      
+      &[data-open="true"] {
+        border-bottom: 2px solid themed('border-line-color');
+      }
+      &[data-open="false"] {
+        border-bottom: none;
       }
     }
   }

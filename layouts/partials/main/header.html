@@ -9,10 +9,12 @@
 
   <div class="header__wrapper bgcolor__breadcrumb">
     <div class="divider">
-      <div class="lmr">
+      <div class="lmr flexbox">
         {{ if $.Param "enableBreadcrumb" }}
           {{ partial "main/component/breadcrumb.html" . }}
         {{ end }}
+        <div class="grow"></div>
+        {{ partial "main/component/edit-this-page.html" . }}
       </div>
     </div>
   </div>

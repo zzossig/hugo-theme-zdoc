@@ -329,6 +329,10 @@
       @include themify($themes) {
         color: themed('body-color');
       }
+
+      &::before {
+        content: "📋 ";
+      }
     }
 
     &--desc {

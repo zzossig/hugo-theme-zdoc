@@ -18,3 +18,6 @@ other = "min read"
 
 [single-writtenBy]
 other = "글쓴이"
+
+[edit-this-page]
+other = "이 페이지 수정하기"

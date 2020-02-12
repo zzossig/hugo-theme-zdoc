@@ -1,15 +1,11 @@
 <span id="navMenuMobile" class="hide">
-  <div class="dropdown">
-    <button class="drawer__dropdown navbar__dropdown--title" aria-label="Section Menu">
-      {{ if .IsHome }}
-        {{ .Site.Title }}
-      {{ else }}
-        {{ .Type }}
-      {{ end }}
-      {{ partial "svgs/arrow-down.svg" (dict "width" 20 "height" 20) }}
-    </button>
-    <ul class="dropdown-content navbar__dropdown--content">
-      {{ partial "drawer/drawer-section.html" . }}
-    </ul>
-  </div>
+  <button id="navCollapseBtn" class="navbar__dropdown--title" aria-label="Section Menu">
+    {{ if .IsHome }}
+      {{ .Site.Title }}
+    {{ else }}
+      {{ .Type }}
+    {{ end }}
+    {{ partial "svgs/arrow-down.svg" (dict "width" 20 "height" 20) }}
+  </button>
+  {{ partial "navbar/menu/navbar-menu-collapse.html" . }}
 </span>

@@ -15,3 +15,7 @@
 .grow {
   @include flex-grow(1);
 }
+
+.flexbox {
+  @include flexbox();
+}

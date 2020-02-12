@@ -1,20 +1,14 @@
 .expand {
   position: relative;
-  margin: 1.5rem 0;
   border-radius: 0.25rem;
 
   &__content {
-    padding: 0 1.125rem;
     overflow: hidden;
     max-height: 0;
     border-bottom-left-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
 
     @include transition(all, 0.2s, ease);
-    @include themify($themes) {
-      border-top: 1px solid themed('content-box-border-color');
-      background-color: themed('toc-body-background-color');
-    }
 
     li {
       font-size: 15.2px;
@@ -45,23 +39,21 @@
   &__button {
     cursor: pointer;
     width: 100%;
-    margin: auto 0;
+    padding: 0.5rem;
     text-align: left;
     outline: none;
     border: none;
-    padding: 0.125rem;
     font-size: 1rem;
     font-family: $title-font;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
 
     @include flexbox();
     @include align-items(center);
     @include themify($themes) {
       color: inherit;
-      background-color: themed('toc-header-background-color');
+      border-top: 1px solid themed('border-line-color');
+      background-color: themed('expand-background-color');
       @include on-event {
-        background-color: themed('toc-header-background-color-hover');
+        background-color: themed('expand-background-color-hover');
       }
     }
   }
