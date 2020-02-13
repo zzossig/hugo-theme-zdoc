@@ -30,8 +30,8 @@
       {{ else }}
         {{ $lastUrlElement1 := index (last 1 (split (delimit (split .Permalink "/") "," "") ",")) 0 }}
         {{ $lastUrlElement2 := index (last 1 (split (delimit (split $currentURL "/") "," "") ",")) 0 }}
-        <li class="{{ if and (in $lastUrlElement1 $lastUrlElement2) (eq $sectionName1 $sectionName2) }}active{{ end }}">
-          <a href="{{ .Permalink }}" class="menu__title {{ if and (in $lastUrlElement1 $lastUrlElement2) (eq $sectionName1 $sectionName2) }}active{{ end }}">{{ .Title }}</a>
+        <li>
+          <a href="{{ .Permalink }}" class="menu__title {{ if in $lastUrlElement1 $lastUrlElement2 }}active{{ end }}">{{ .Title }}</a>
         </li>
       {{ end }}
     {{ end }}

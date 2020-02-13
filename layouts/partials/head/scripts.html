@@ -147,11 +147,20 @@
     var tableOfContentsElem = tocElem ? tocElem.querySelector('#TableOfContents') : null;
     var singleContentsElem = document.querySelector('.single__contents');
 
+    {{ $tocLevels := ($.Param "tocLevels") }}
+    var tocLevels = JSON.parse({{ $tocLevels | jsonify }});
+
+    if (tocLevels) {
+      tocLevels = tocLevels.toString();
+    } else {
+      tocLevels = "h1, h2, h3, h4, h5, h6";
+    }
+
     window.onscroll = function () {
       var st = window.pageYOffset || document.documentElement.scrollTop;
       if (st > lastScrollTop) { // scroll down
         singleContentsElem ? 
-        singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function(elem) {
+        singleContentsElem.querySelectorAll(tocLevels.toString()).forEach(function(elem) {
           if (document.documentElement.scrollTop >= elem.offsetTop) {
             if (tableOfContentsElem) {
               var id = elem.getAttribute('id');
@@ -165,7 +174,7 @@
         }) : null;
       } else { // scroll up
         singleContentsElem ? 
-        singleContentsElem.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(function(elem) {
+        singleContentsElem.querySelectorAll(tocLevels.toString()).forEach(function(elem) {
           if (document.documentElement.scrollTop >= elem.offsetTop) {
             if (tableOfContentsElem) {
               var id = elem.getAttribute('id');

@@ -80,7 +80,7 @@
       & > a {
         width: 100%;
         font-size: 18px;
-        padding: 0.5rem;
+        padding: 0.5rem 1rem;
         
         @include themify($themes) {
           color: themed('body-color');

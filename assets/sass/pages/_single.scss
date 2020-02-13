@@ -23,8 +23,7 @@
     font-family: $title-font;
     line-height: 3rem;
     overflow-wrap: break-word;
-    padding: 1rem;
-    margin: 1rem 0;
+    margin: 1.5rem 1rem 0.5rem;
 
     @include themify($themes) {
       color: themed("single-header-title-color");
@@ -34,6 +33,7 @@
   &__meta {
     font-size: 0.8rem;
     margin-bottom: 1.5rem;
+    padding:0 1rem;
 
     @include flexbox();
     @include align-items(center);
@@ -393,7 +393,7 @@ pre:not(.chroma) {
 }
 
 .highlight > .chroma {
-  margin: 1em 0;
+  margin-bottom: 1.5rem;
   z-index: z('content');
   overflow-x: auto;  
 
@@ -504,6 +504,7 @@ li .highlight > .chroma {
 }
 
 table:not(.lntable) {
+  margin: 0 1rem;
   td {
     code {
       padding: 2px 7px !important;
