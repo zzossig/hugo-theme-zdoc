@@ -19,3 +19,15 @@
 .flexbox {
   @include flexbox();
 }
+
+.jc-center {
+  @include justify-content(center);
+}
+
+.ai-center {
+  @include align-items(center);
+}
+
+.flex-wrap {
+  @include flex-wrap(wrap);
+}

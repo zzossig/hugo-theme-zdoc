@@ -23,10 +23,10 @@
     font-family: $title-font;
     line-height: 3rem;
     overflow-wrap: break-word;
-    margin: 1.5rem 1rem 0.5rem;
+    margin: 2rem 1rem 0.25rem;
 
     @include themify($themes) {
-      color: themed("single-header-title-color");
+      color: themed("title-color");
     }
   }
 

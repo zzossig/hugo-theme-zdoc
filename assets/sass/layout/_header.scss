@@ -10,14 +10,22 @@
   @include align-items(center);
   @include flex-direction(column);
 
-  .title {
-    font-family: $title-font;
-    font-weight: 900;
-  }
-
   &__wrapper {
     @include themify($themes) {
       border-bottom: 1px solid themed('border-line-color');
+    }
+
+    .title {
+      font-size: 3rem;
+      font-weight: 900;
+      font-family: $title-font;
+      line-height: 3rem;
+      overflow-wrap: break-word;
+      margin: 2rem 1.5rem;
+
+      @include themify($themes) {
+        color: themed("title-color");
+      }
     }
   }
 }
@@ -29,8 +37,15 @@
 
   &__title {
     line-height: 1.1;
-    font-weight: 700;
+    font-weight: 900;
     font-family: $title-font;
+    font-size: 3rem;
+    line-height: 3rem;
+    overflow-wrap: break-word;
+
+    @include themify($themes) {
+      color: themed("title-color");
+    }
   }
 
   &__subtitle {

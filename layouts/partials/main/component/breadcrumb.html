@@ -1,4 +1,4 @@
-<nav class="breadcrumb" aria-label="breadcrumbs">
+<nav class="breadcrumb" aria-label="breadcrumbs" data-is-blog="{{ if eq .Type "blog" }}true{{ else }}false{{ end }}">
   <ol>
     {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
   </ol>

@@ -1,10 +1,31 @@
 {{ define "main" }}
 <div class="top">
-  <header class="main blog__bg">
-    <div class="sv" data-view="full">
-      {{ partial "header/blog-header.html" . }}
+  <header class="header__wrapper bgcolor__header">
+    <div class="divider">
+      <div class="lmr">
+        {{ partial "header/blog-header.html" . }}
+      </div>
     </div>
   </header>
+  
+  <div class="header__wrapper bgcolor__breadcrumb">
+    <div class="divider">
+      <div class="lmr flexbox jc-center flex-wrap tag__wrapper">
+        {{ range $index, $element := .Site.Taxonomies.tags }}
+          {{ if $index }}
+            <a href="{{ $element.Page.RelPermalink }}" class="tag">
+              <span class="tag__text">
+                {{ $element.Page.Title }}
+              </span>
+              <span class="tag__num" dir="auto">
+                {{ printf "%#v" (len $element) }}
+              </span>
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
 </div>
 <div class="mid blog__bg">
   <main class="main blog__bg">

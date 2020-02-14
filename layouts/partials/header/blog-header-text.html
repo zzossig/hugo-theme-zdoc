@@ -1,7 +1,7 @@
 {{ if .Params.header }}
   {{ range .Params.header }}
     {{ if eq .type "text" }}
-    <div class="blog-header blog-header__align-{{ .align }}" style="width: 100%; height: {{ .height }}px; padding: {{ .paddingY }}px {{ .paddingX }}px;">
+    <div class="blog-header blog-header__align-{{ .align }}" style="width: 100%; height: {{ $.Param "headerHeight" | default 112 }}px;">
       {{ $header := . }}
       {{ if .title }}
         {{ range .title }}
