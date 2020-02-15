@@ -5,7 +5,7 @@
   padding: 0 0.75rem;
   height: 100%;
   position: relative;
-
+  
   @include flexbox();
   @include align-items(center);
 
@@ -240,9 +240,16 @@
       font-family: $title-font;
       border: none;
       outline: none;
-      margin-left: 1rem;
       height: $grid-nav-height;
       cursor: pointer;
+
+      &[data-dir="rtl"] {
+        margin-right: 1rem;
+      }
+
+      &[data-dir="ltr"] {
+        margin-left: 1rem;
+      }
 
       @include flexbox();
       @include align-items(center);

@@ -8,7 +8,7 @@
     </div>
   {{ end }}
 
-  <article class="single__contents">
+  <article class="single__contents" data-dir="{{ $.Param "languagedir" | default "ltr" }}">
     {{ .Content }}
   </article>
 </div>

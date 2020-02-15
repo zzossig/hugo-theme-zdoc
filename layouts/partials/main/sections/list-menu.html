@@ -14,8 +14,12 @@
       {{ if .Params.Collapsible }}
         <span class="menu__title--collapse {{ if and (in $currentURL .Permalink) (eq $sectionName1 $sectionName2) }}active{{ end }}">
           {{ .Title }}
-          <span class="menu__title--icon {{ if and (in $currentURL .Permalink) (eq $sectionName1 $sectionName2) }}down{{ else }}right{{ end }}">
-            {{ partial "svgs/arrow-right.svg" (dict "width" 22 "height" 22) }}
+          <span class="menu__title--icon {{ if and (in $currentURL .Permalink) (eq $sectionName1 $sectionName2) }}{{ if eq ($.Param "languagedir") "rtl" }}downrtl{{ else }}down{{ end }}{{ else }}right{{ end }}">
+            {{ if eq ($.Param "languagedir") "rtl" }}
+              {{ partial "svgs/arrow-left.svg" (dict "width" 22 "height" 22) }}
+            {{ else }}
+              {{ partial "svgs/arrow-right.svg" (dict "width" 22 "height" 22) }}
+            {{ end }}
           </span>
         </span>
         <ul class="menu__list {{ if and (in $currentURL .Permalink) (eq $sectionName1 $sectionName2) }}active{{ end }}">

@@ -101,6 +101,11 @@
         @include transition(all, 0.15s, ease);
       }
 
+      &.downrtl {
+        @include rotate(-90);
+        @include transition(all, 0.15s, ease);
+      }
+
       &.right {
         @include rotate(0);
         @include transition(all, 0.15s, ease);

@@ -1,6 +1,12 @@
 #single-menu {
   @include themify($themes) {
-    border-right: 1px solid themed('border-line-color');
+    &[data-dir="ltr"] {
+      border-right: 1px solid themed('border-line-color');
+    }
+
+    &[data-dir="rtl"] {
+      border-left: 1px solid themed('border-line-color');
+    }
   }
 }
 
@@ -133,6 +139,7 @@
       margin-top: 1.6rem;
       overflow: auto;
       line-height: 1.5;
+      direction: ltr;
 
       @include themify($themes) {
         border-top: 1px solid themed('border-line-color');
@@ -223,9 +230,19 @@
       margin-bottom: 1rem;
     }
 
-    li {
-      margin-left: 2rem;
+    &[data-dir="ltr"] {
+      li {
+        margin-left: 2rem;
+      }
+    }
 
+    &[data-dir="rtl"] {
+      li {
+        margin-right: 2rem;
+      }
+    }
+
+    li {
       & > code {
         padding: 2px 7px;
       }
@@ -365,6 +382,7 @@ pre:not(.chroma) {
   overflow-x: auto;
   position: relative;
   margin: 1rem 0;
+  direction: ltr;
 
   @include on-event {
     .copy-to-clipboard {
@@ -395,7 +413,8 @@ pre:not(.chroma) {
 .highlight > .chroma {
   margin-bottom: 1.5rem;
   z-index: z('content');
-  overflow-x: auto;  
+  overflow-x: auto;
+  direction: ltr;
 
   @include themify($codeblock) {
     color: themed('content-pre-color');

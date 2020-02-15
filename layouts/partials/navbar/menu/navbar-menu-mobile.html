@@ -1,5 +1,5 @@
 <span id="navMenuMobile" class="hide">
-  <button id="navCollapseBtn" class="navbar__dropdown--title" aria-label="Section Menu">
+  <button id="navCollapseBtn" class="navbar__dropdown--title" aria-label="Section Menu" data-dir="{{ $.Param "languagedir" | default "ltr" }}">
     {{ if .IsHome }}
       {{ .Site.Title }}
     {{ else }}

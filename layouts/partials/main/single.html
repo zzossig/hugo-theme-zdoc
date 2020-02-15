@@ -1,7 +1,7 @@
 <div class="mid">
   <div class="divider">
     
-    <nav id="single-menu" class="l">
+    <nav id="single-menu" class="l" data-dir="{{ $.Param "languagedir" | default "ltr" }}">
       {{ if $.Param "enableMenu" }}
         {{ partial "main/sections/single-menu.html" . }}
       {{ end }}
@@ -13,7 +13,7 @@
       {{ partial "comments/comments.html" . }}
     </article>
     
-    <section id="list-side" class="r">
+    <section id="list-side" class="r" data-dir="{{ $.Param "languagedir" | default "ltr" }}">
       {{ if $.Param "enableToc" }}
         {{ partial "main/component/toc.html" . }}
       {{ end }}
