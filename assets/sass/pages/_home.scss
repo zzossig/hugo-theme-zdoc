@@ -1,7 +1,7 @@
 .home {
   &__landing {
     width: 100%;
-    height: 600px;
+    min-height: 500px;
     
     @include flexbox();
     @include align-items(center);
@@ -16,9 +16,10 @@
     }
 
     &--txt {
-      margin: 0.5rem;
+      margin: 2.5rem 0.5rem;
       .title {
-        font-size: 44px;
+        font-size: 56px;
+        font-weight: 900;
         font-family: $title-font;
       }
 
@@ -33,6 +34,15 @@
 
     &--link {
       text-decoration: none !important;
+    }
+
+    &--btn {
+      margin-top: 2.5rem;
+      margin-right: 0.5rem;
+    }
+
+    &--btn2 {
+      margin: 0.5rem;
     }
   }
 

@@ -20,6 +20,11 @@
   @include flexbox();
 }
 
+.flexcolumn {
+  @include flexbox();
+  @include flex-direction(column);
+}
+
 .jc-center {
   @include justify-content(center);
 }

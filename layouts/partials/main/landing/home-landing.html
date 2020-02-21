@@ -1,36 +1,67 @@
 <div class="divider">
   <div class="lmr">
     <div class="home__landing">
-      <div class="home__landing--img">
-        <img src="{{ $.Param "landingImage" | relURL }}" alt="Site Landing Page image">
-      </div>
-      <div class="home__landing--txt">
-        {{ if $.Param "landingTitle" }}
-          {{ range $.Param "landingTitle" }}
-          <div class="title" style="{{ with $.Param "titleColor" }}color:{{ . }}{{ end }};">
-            {{ . }}
-          </div>
-          {{ end }}
-        {{ end }}
-          {{ if $.Param "spaceBetweenTitleText" }}
-            <div style="height: {{ $.Param "spaceBetweenTitleText" }}px"></div>
-          {{ end }}
-        {{ if $.Param "landingText" }}
-          {{ range $.Param "landingText" }}
-            <div class="text" style="{{ with $.Param "textColor" }}color:{{ . }}{{ end }};">
+      {{ if $.Param "landingImage" }}
+        <div class="home__landing--img">
+          <img src="{{ $.Param "landingImage" | relURL }}" alt="Site Landing Page image">
+        </div>
+        <div class="home__landing--txt">
+          {{ if $.Param "landingTitle" }}
+            {{ range $.Param "landingTitle" }}
+            <div class="title" style="{{ with $.Param "titleColor" }}color:{{ . }}{{ end }};">
               {{ . }}
             </div>
+            {{ end }}
           {{ end }}
-        {{ end }}
+            {{ if $.Param "spaceBetweenTitleText" }}
+              <div style="height: {{ $.Param "spaceBetweenTitleText" }}px"></div>
+            {{ end }}
+          {{ if $.Param "landingText" }}
+            {{ range $.Param "landingText" }}
+              <div class="text" style="{{ with $.Param "textColor" }}color:{{ . }}{{ end }};">
+                {{ . }}
+              </div>
+            {{ end }}
+          {{ end }}
 
-        {{ range .Params.buttons }}
-        <a href="{{ .link }}" target="{{ if in .link "http" }}_blank{{ else }}_self{{ end }}" rel="noreferrer" class="home__landing--link">
-          <button class="button" aria-label="{{ .text }}" data-color="{{ with .color }}{{ . }}{{ end }}">
-            {{ .text }}
-          </button>
-        </a>
-        {{ end }}
-      </div>
+          {{ range .Params.buttons }}
+            <a href="{{ .link }}" target="{{ if in .link "http" }}_blank{{ else }}_self{{ end }}" rel="noreferrer" class="home__landing--link">
+              <button class="button home__landing--btn" aria-label="{{ .text }}" data-color="{{ with .color }}{{ . }}{{ end }}">
+                {{ .text }}
+              </button>
+            </a>
+          {{ end }}
+        </div>
+      {{ else }}
+        <div class="home__landing--txt">
+          {{ if $.Param "landingTitle" }}
+            {{ range $.Param "landingTitle" }}
+            <div class="title" style="{{ with $.Param "titleColor" }}color:{{ . }}{{ end }};">
+              {{ . }}
+            </div>
+            {{ end }}
+          {{ end }}
+            {{ if $.Param "spaceBetweenTitleText" }}
+              <div style="height: {{ $.Param "spaceBetweenTitleText" }}px"></div>
+            {{ end }}
+          {{ if $.Param "landingText" }}
+            {{ range $.Param "landingText" }}
+              <div class="text" style="{{ with $.Param "textColor" }}color:{{ . }}{{ end }};">
+                {{ . }}
+              </div>
+            {{ end }}
+          {{ end }}
+        </div>
+        <div class="flexcolumn">
+          {{ range .Params.buttons }}
+            <a href="{{ .link }}" target="{{ if in .link "http" }}_blank{{ else }}_self{{ end }}" rel="noreferrer" class="home__landing--link">
+              <button class="button home__landing--btn2" aria-label="{{ .text }}" data-color="{{ with .color }}{{ . }}{{ end }}">
+                {{ .text }}
+              </button>
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
     </div>
   </div>
 </div>
