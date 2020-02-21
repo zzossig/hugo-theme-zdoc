@@ -38,6 +38,7 @@ $light-link-hover-color: {{ .Site.Data.color.light_link_hover_color }};
 @import 'components/bgcolor';
 @import 'components/tag';
 @import 'components/section';
+@import 'components/lib';
 
 @import 'layout/grid';
 @import 'layout/footer';
