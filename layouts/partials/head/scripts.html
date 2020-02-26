@@ -378,32 +378,36 @@
     
     {{ $enableSearchHighlight := ($.Param "enableSearchHighlight") }}
     var enableSearchHighlight = JSON.parse({{ $enableSearchHighlight | jsonify }});
+    {{ $enableSearch := ($.Param "enableSearch") }}
+    var enableSearch = JSON.parse({{ $enableSearch | jsonify }});
 
     var fuse = null;
 
-    (function initFuse() {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', permalink + "index.json");
-      xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-      xhr.onload = function () {
-        if (xhr.status === 200) {
-          fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-            keys: ['title', 'description', 'content'],
-            includeMatches: enableSearchHighlight,
-            shouldSort: true,
-            threshold: 0.4,
-            location: 0,
-            distance: 100,
-            maxPatternLength: 32,
-            minMatchCharLength: 1,
-          });
-        }
-        else {
-          console.error(`[${xhr.status}]Error:`, xhr.statusText);
-        }
-      };
-      xhr.send();
-    })();
+    if (enableSearch) {
+      (function initFuse() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', permalink + "index.json");
+        xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
+              keys: ['title', 'description', 'content'],
+              includeMatches: enableSearchHighlight,
+              shouldSort: true,
+              threshold: 0.4,
+              location: 0,
+              distance: 100,
+              maxPatternLength: 32,
+              minMatchCharLength: 1,
+            });
+          }
+          else {
+            console.error(`[${xhr.status}]Error:`, xhr.statusText);
+          }
+        };
+        xhr.send();
+      })();
+    }
     
     function makeLi(ulElem, obj) {
       var li = document.createElement('li');
@@ -790,6 +794,7 @@
     var items = null;
     var searchContainerMaxHeight = 350;
 
+    searchElem ? 
     searchElem.addEventListener('keydown', function(e) {
       if (window.innerWidth < 770) {
         return null;
@@ -840,7 +845,7 @@
           searchResults.classList.remove('is-active');
         }
       }
-    });
+    }) : null;
 
     searchMobile ? 
     searchMobile.addEventListener('input', function(e) {

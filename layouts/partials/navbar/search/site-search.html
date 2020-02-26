@@ -1,6 +1,6 @@
 {{ if $.Param "enableSearch" }}
 
-<div class="search">
+<div class="search" data-bgimg="{{ if $.Params.landing.backgroundImage }}true{{ else }}false{{ end }}">
   <span class="icon">
     {{ partial "svgs/search.svg" (dict "width" 22 "height" 22) }}
   </span>

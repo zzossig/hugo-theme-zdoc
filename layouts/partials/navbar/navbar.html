@@ -1,6 +1,6 @@
 {{ if .Site.Params.enableNavbar }}
 <nav class="nav">
-  <div class="navbar__wrapper">
+  <div class="navbar__wrapper" data-bgimg="{{ if $.Params.landing.backgroundImage }}true{{ else }}false{{ end }}">
     <div class="divider">
       <div class="navbar lmr">
         {{ partial "navbar/logo/navbar-logo.html" . }}

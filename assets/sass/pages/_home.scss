@@ -13,10 +13,13 @@
 
     &--img {
       margin: 0.5rem;
+      z-index: z('landing');
     }
 
     &--txt {
       margin: 2.5rem 0.5rem;
+      z-index: z('landing');
+
       .title {
         font-size: 56px;
         font-weight: 900;

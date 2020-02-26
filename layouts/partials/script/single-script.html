@@ -27,6 +27,11 @@
   <script defer src="{{ $js.flowchartjs.url }}" integrity="{{ $js.flowchartjs.sri }}" crossorigin="anonymous"></script>
 {{ end }}
 
+{{ if in .Params.Libraries "viz" }}
+  <script defer src="{{ $js.viz.url }}" crossorigin="anonymous"></script>
+  <script defer src="{{ $js.viz_render.url }}" integrity="{{ $js.viz_render.sri }}" crossorigin="anonymous"></script>
+{{ end }}
+
 {{ if in .Params.Libraries "mathjax" }}
   <script type="text/javascript" async src="{{ $js.mathjax.url }}?config=TeX-AMS-MML_HTMLorMML">
     MathJax.Hub.Config({
@@ -179,6 +184,29 @@
         var myChart = new Chart(ctx, source);
         index += 1;
       });            
+    }
+    // =================================================================
+
+
+    // ========================== viz diagram ==========================
+    if (lib && lib.includes('viz')) {
+      var vizPrefix = "language-viz-";
+      Array.prototype.forEach.call(document.querySelectorAll("[class^=" + vizPrefix + "]"), function (x) {
+        x.style.display = 'none'
+        x.parentNode.style.backgroundColor = "transparent"
+        var engine;
+        x.getAttribute("class").split(" ").forEach(function (cls) {
+          if (cls.startsWith(vizPrefix)) {
+            engine = cls.substr(vizPrefix.length);
+          }
+        });
+        var viz = new Viz();
+        viz.renderSVGElement(x.innerText, { engine: engine })
+          .then(function (element) {
+            element.style.width = "100%";
+            x.parentNode.insertBefore(element, x);
+          })
+      });
     }
     // =================================================================
     

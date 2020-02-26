@@ -6,19 +6,34 @@
   z-index: z('search'); 
   margin: 0 0.75rem;
 
+  &[data-bgimg="true"] {
+    @include themify($themes) {
+      border: 2px solid themed('search-border-color');
+      background-color: transparent;
+      &:focus-within {
+        background-color: themed("search-background-color");
+        border: 2px solid themed('search-border-active-color');
+        @include box-shadow(0, 0, 0, 3px, themed('search-border-outline-color'));
+      }
+    }
+  }
+
+  &[data-bgimg="false"] {
+    @include themify($themes) {
+      border: 2px solid themed('search-border-color');
+      background-color: themed("search-background-color");
+      &:focus-within {
+        border: 2px solid themed('search-border-active-color');
+        @include box-shadow(0, 0, 0, 3px, themed('search-border-outline-color'));
+      }
+    }
+  }
+
   @include box-shadow(0, 0, 0, 3px, transparent);
   @include transition(all, 0.2s, ease-in);
   @include flexbox();
   @include align-items(center);
   @include transition(all, 0.15s, ease);
-  @include themify($themes) {
-    border: 2px solid themed('search-border-color');
-    background-color: themed("search-background-color");
-    &:focus-within {
-      border: 2px solid themed('search-border-active-color');
-      @include box-shadow(0, 0, 0, 3px, themed('search-border-outline-color'));
-    }
-  }
 
   @media only screen and (max-width: 1280px) {
     width: 170px;

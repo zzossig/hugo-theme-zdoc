@@ -17,15 +17,22 @@
     right: 0;
     top: 0;
     z-index: z('navbar');
-    box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(60,65,70,0.1);
+    color: inherit;
+
+    &[data-bgimg="true"] {
+      background-color: transparent;
+    }
+
+    &[data-bgimg="false"] {
+      box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(60,65,70,0.1);
+      @include themify($themes) {
+        background-color: themed('navbar-background-color');
+      }
+    }
 
     @include flexbox();
     @include align-items(center);
     @include justify-content(center);
-    @include themify($themes) {
-      color: inherit;
-      background-color: themed('navbar-background-color');
-    }
   }
 
   &__menu {

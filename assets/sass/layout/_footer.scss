@@ -19,6 +19,9 @@
 
     &--wrapper {
       @include flexbox();
+      @media only screen and (max-width: 600px) {
+        @include flex-direction(column);
+      }
     }
 
     &--title {

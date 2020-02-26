@@ -25,7 +25,13 @@
 [js.chart]
   sri = "sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
   url = "https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"
+[js.viz]
+  sri = "" # no sri
+  url = "https://cdn.jsdelivr.net/npm/viz.js@2.1.2/viz.min.js"
 
+[js.viz_render]
+  sri = "sha256-Ogqs510LFnekr9o7OLdpelaaAmNss9egQRTyzCqV2NQ="
+  url = "https://cdn.jsdelivr.net/npm/viz.js@2.1.2/full.render.js"
 
 
 # css
