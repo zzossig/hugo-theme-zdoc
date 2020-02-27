@@ -5,6 +5,6 @@
   {{ $active = or $active (eq (lower .URL) (lower $current.Title)) }}
   {{ $active = or $active (eq (lower .URL) (lower $current.Type)) }}
   <li class="navbar__menu--mobile-item {{ if $active }}active{{ end }}">
-    <a href="{{ .URL | relLangURL | safeHTMLAttr }}" class="{{ if $active }}active{{ end }}">{{ safeHTML .Name }}</a>
+    <a href="{{ .URL | relLangURL | safeURL }}" class="{{ if $active }}active{{ end }}">{{ safeHTML .Name }}</a>
   </li>
 {{ end }}
