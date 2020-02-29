@@ -186,6 +186,7 @@
     var tocElem = document.querySelector('.toc');
     var tableOfContentsElem = tocElem ? tocElem.querySelector('#TableOfContents') : null;
     var singleContentsElem = document.querySelector('.single__contents');
+    var dataBGImgs = document.querySelectorAll('div[data-bgimg]');
 
     {{ $tocLevels := ($.Param "tocLevels") }}
     var tocLevels = JSON.parse({{ $tocLevels | jsonify }});
@@ -195,6 +196,26 @@
     } else {
       tocLevels = "h1, h2, h3, h4, h5, h6";
     }
+
+    {{ $isLandingBgImg := $.Params.landing.backgroundImage }}
+    var isLandingBgImg = JSON.parse({{ $isLandingBgImg | jsonify }});
+    {{ $isHome := .IsHome }}
+    var isHome = JSON.parse({{ $isHome | jsonify }});
+
+    function setNavbarBG(scrollTop) {
+      if (isHome && isLandingBgImg && Object.keys(isLandingBgImg).length) {
+        if (isLandingBgImg.height <= scrollTop) {
+          dataBGImgs.forEach(function(elem) {
+            elem.setAttribute('data-bgimg', 'false');
+          });
+        } else {
+          dataBGImgs.forEach(function (elem) {
+            elem.setAttribute('data-bgimg', 'true');
+          });
+        }
+      }
+    }
+    setNavbarBG(lastScrollTop);
 
     window.onscroll = function () {
       var st = window.pageYOffset || document.documentElement.scrollTop;
@@ -212,6 +233,7 @@
             }
           }
         }) : null;
+        setNavbarBG(st);
       } else { // scroll up
         singleContentsElem ? 
         singleContentsElem.querySelectorAll(tocLevels.toString()).forEach(function(elem) {
@@ -226,6 +248,7 @@
             }
           }
         }) : null;
+        setNavbarBG(st);
       }
       lastScrollTop = st <= 0 ? 0 : st;
     };

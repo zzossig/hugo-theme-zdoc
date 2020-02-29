@@ -6,9 +6,16 @@ $content-font: {{ .Site.Data.font.content_font }};
 $dark-active-font-color: {{ .Site.Data.color.dark_active_font_color }};
 $dark-link-color: {{ .Site.Data.color.dark_link_color }};
 $dark-link-hover-color: {{ .Site.Data.color.dark_link_hover_color }};
+$dark-nav-logo-color: {{ .Site.Data.color.dark_nav_logo_color }};
+$dark-nav-menu-color: {{ .Site.Data.color.dark_nav_menu_color }};
+$dark-nav-icon-color: {{ .Site.Data.color.dark_nav_icon_color }};
+
 $light-active-font-color: {{ .Site.Data.color.light_active_font_color }};
 $light-link-color: {{ .Site.Data.color.light_link_color }};
 $light-link-hover-color: {{ .Site.Data.color.light_link_hover_color }};
+$light-nav-logo-color: {{ .Site.Data.color.light_nav_logo_color }};
+$light-nav-menu-color: {{ .Site.Data.color.light_nav_menu_color }};
+$light-nav-icon-color: {{ .Site.Data.color.light_nav_icon_color }};
 
 @import 'abstracts/variables';
 @import 'abstracts/mixins';

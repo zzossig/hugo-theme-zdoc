@@ -8,7 +8,7 @@
 
   &[data-bgimg="true"] {
     @include themify($themes) {
-      border: 2px solid themed('search-border-color');
+      border: 2px solid transparent;
       background-color: transparent;
       &:focus-within {
         background-color: themed("search-background-color");

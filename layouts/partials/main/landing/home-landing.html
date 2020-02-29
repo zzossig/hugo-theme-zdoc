@@ -5,7 +5,7 @@
     {{ with .backgroundImage }}
       <div style="background-image: url('{{ .src | relURL }}'); background-position: center; background-repeat: no-repeat; background-size: cover; position: absolute; top: -50px; left: 0; width: 100%; height: {{ .height }}px;"></div>
     {{ end }}
-    <div class="home__landing">
+    <div class="home__landing" style="height: {{ .height }}px;">
       {{ if .image }}
         <div class="home__landing--img">
           <img src="{{ .image | relURL }}" alt="Site Landing Page image">

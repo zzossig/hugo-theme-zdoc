@@ -8,7 +8,7 @@
   {{ end }}
   {{ if ne .Site.Params.logoType "long" }}
     <a href="{{ "/" | relLangURL }}" title="{{ i18n "tooltip-home" }}" rel="home" class="navbar__logo--text-link">
-      <h6 class="navbar__logo--text">{{ .Site.Params.logoText }}</h6>
+      <h6 class="navbar__logo--text" data-bgimg="{{ if and ($.Params.landing.backgroundImage) $.IsHome }}true{{ else }}false{{ end }}">{{ .Site.Params.logoText }}</h6>
     </a>
   {{ end }}
 </div>
