@@ -7,7 +7,7 @@
       {{ end }}
     </nav>
 
-    <article id="list-main" class="m">
+    <article id="list-main" class="m" data-dir="{{ $.context.Param "languagedir" | default "ltr" }}">
       {{ partial "main/sections/list-main.html" .context }}
       {{ if .section_to_display }}
         {{ partial "main/sections/list-section.html" (dict "section_to_display" .section_to_display) }}

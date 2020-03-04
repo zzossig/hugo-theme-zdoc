@@ -14,8 +14,6 @@
     padding: 0.5rem 0;
   }
 
-  @include truncate($grid-body-width);
-
   ol {
     @include flexbox();
     @include align-items(center);
@@ -25,6 +23,8 @@
   li {
     display: inline;
     font-size: 0.9rem;
+
+    @include truncate(300px);
     
     a {
       @include themify($themes) {

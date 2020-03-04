@@ -5,10 +5,20 @@
   @include flex-direction(column);
   @include themify($themes) {
     background-color: themed('body-background-color');
+
+    &[data-dir="ltr"] {
+      border-right: 1px solid themed('border-line-color');
+    }
+
+    &[data-dir="rtl"] {
+      border-left: 1px solid themed('border-line-color');
+    }
   }
 }
 
 #list-menu {
+  position: relative;
+  
   @include themify($themes) {
     &[data-dir="ltr"] {
       border-right: 1px solid themed('border-line-color');
@@ -21,15 +31,7 @@
 }
 
 #list-side {
-  @include themify($themes) {
-    &[data-dir="ltr"] {
-      border-left: 1px solid themed('border-line-color');
-    }
-
-    &[data-dir="rtl"] {
-      border-right: 1px solid themed('border-line-color');
-    }
-  }
+  position: relative;
 }
 
 .list-section {

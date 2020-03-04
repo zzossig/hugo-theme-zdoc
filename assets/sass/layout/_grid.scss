@@ -21,7 +21,7 @@
     @include justify-content(center);
     @include themify($themes) {
       color: themed('body-color');
-  }  
+    }
 }
 
 .nav { grid-area: 1 / 1 / 2 / 2; }

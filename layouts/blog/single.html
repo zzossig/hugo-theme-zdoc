@@ -5,10 +5,11 @@
     <nav id="single-menu" class="l" data-dir="{{ $.Param "languagedir" | default "ltr" }}">
     </nav>
 
-    <article id="list-main" class="m">
+    <article id="list-main" class="m" data-dir="{{ $.Param "languagedir" | default "ltr" }}">
       {{ if $.Param "enableBlogBreadcrumb" }}
         {{ partial "main/component/breadcrumb.html" . }}
       {{ end }}
+      {{ partial "main/component/toggle-sidebar.html" . }}
       {{ partial "main/sections/list-main.html" . }}
       {{ partial "main/component/pagination-single.html" . }}
     </article>
@@ -22,6 +23,7 @@
   </div>
 </div>
 
+{{ partial "script/single-script.html" . }}
 <script>
   var listSide = document.getElementById('list-side');
   var listMain = document.getElementById('list-main');
