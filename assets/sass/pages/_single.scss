@@ -291,12 +291,14 @@
     }
 
     .table-wrapper {
-      overflow-x: auto;      
+      overflow-x: auto;    
+      margin: 1rem;  
 
       > table {
         max-width: 100%;
         margin: 10px 0;
         border-spacing: 0;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.125);
         
         @include themify($codeblock) {
           thead {
@@ -308,8 +310,7 @@
           }
 
           th, td {
-            padding: 5px 15px;
-            font-size: 13.8px;
+            padding: 0.25rem 0.5rem;
             border: 1px double themed('content-pre-border-background-color');
           }
         }
@@ -522,8 +523,14 @@ li .highlight > .chroma {
   }
 }
 
+td:not(.lntd) {
+  code {
+    padding: 2px 7px !important;
+  }
+}
+
 table:not(.lntable) {
-  margin: 0 1rem;
+  // margin: 0 1rem;
   td {
     code {
       padding: 2px 7px !important;

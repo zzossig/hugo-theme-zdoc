@@ -71,6 +71,18 @@
   document.addEventListener('DOMContentLoaded', function () {
     'use strict';
     
+    // ======================== markdown table =========================
+    var tables = document.querySelectorAll('.single__contents > table');
+    for (let i = 0; i < tables.length; i++) {
+      var table = tables[i];
+      var wrapper = document.createElement('div');
+      wrapper.className = 'table-wrapper';
+      table.parentElement.replaceChild(wrapper, table);
+      wrapper.appendChild(table);
+    }
+    // =================================================================
+
+    
     // ============================ mermaid ============================
     {{ $lib := .Params.libraries }}
     var lib = JSON.parse({{ $lib | jsonify }});
