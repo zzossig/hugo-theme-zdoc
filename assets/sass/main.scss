@@ -47,6 +47,8 @@ $light-nav-icon-color: {{ .Site.Data.color.light_nav_icon_color }};
 @import 'components/section';
 @import 'components/lib';
 @import 'components/switch';
+@import 'components/notice';
+@import 'components/alert';
 
 @import 'layout/grid';
 @import 'layout/footer';

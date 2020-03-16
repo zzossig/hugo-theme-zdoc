@@ -13,6 +13,7 @@ Thank you for click me!. Zdoc theme is a simple documentation theme powered by H
 * [How to make Doc](#how-to-make-doc)
 * [Multi Language](#multi-language)
 * [Favicon](#favicon)
+* [Shortcodes](#shortcodes)
 
 ## Features
 
@@ -356,3 +357,27 @@ If you want to support mobile favicon, use [favicon-generator](https://www.favic
 - Make a folder at `root/static/favicon`
 - Unzip the generated favicon to that folder.
 - Set the config param `useFaviconGenerator` to `true`
+
+## Shortcodes
+
+### alert
+
+```bash
+{{< alert theme="warning" >}} # warning, success, info, danger
+**this** is a text
+{{< /alert >}}
+```
+
+### expand
+
+```bash
+{{< expand "Expand me" >}}Some Markdown Contents{{< /expand >}}
+```
+
+### notice
+
+```bash
+{{< notice success "This is title" >}} # success, info, warning, error
+success
+{{< /notice >}}
+```
