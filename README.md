@@ -194,9 +194,9 @@ github = "https://github.com/zzossig/hugo-theme-zdoc"
 
 ## How to make doc
 
-1. Make a folder in the `content` folder. The folder will be appeared in the menu. I'm going to make `doc` folder.
+1. Make a folder in the `content` folder. The folder will be appeared in the menu. I'm going to make `docs` folder.
 
-2. Make a `_index.md` file in the `doc` folder.
+2. Make a `_index.md` file in the `docs` folder.
 
 ```yaml
 ---
@@ -210,7 +210,7 @@ The content here is appeared when you click the manu. So called overview page.
 
 3. There are two types of pages. One is a single page and the other is collapsible page.
 
-- single page - Just make a md file in the `doc` folder
+- single page - Just make a md file in the `docs` folder
 
     ```yaml
     ---
