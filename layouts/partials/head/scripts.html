@@ -456,7 +456,7 @@
 
 
   // ========================== search ==========================
-    {{ $searchURL:= ("/" | absLangURL) }}
+    {{ $searchURL:= ("" | absLangURL) }}
     var searchURL = JSON.parse({{ $searchURL | jsonify }});
     var searchResults = null;
     var searchMenu = null;
