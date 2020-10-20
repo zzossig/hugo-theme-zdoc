@@ -34,7 +34,7 @@
 .divider {
     display: grid;
     height: 100%;
-    grid-template-columns: minmax(200px, 240px) minmax(350px, 769px) minmax(200px, 240px);
+    grid-template-columns: minmax(200px, 240px) minmax(350px, 769px) minmax(240px, 320px);
     grid-template-rows: auto;
     grid-column-gap: 0px;
     grid-row-gap: 0px;

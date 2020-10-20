@@ -1,9 +1,11 @@
 $lightcode: (
-  content-code-color: #607d8b,
+  content-code-color: #344952,
+  content-code-in-pre-color: #607d8b,
+  content-code-background-color: #ffe56433,
   content-pre-color: #344952,
   content-pre-number-color: #aaa,
-  content-pre-background-color: #f7f8f9,
-  content-pre-border-background-color: darken(#eceff1, 7%),
-  content-pre-header-background-color: darken(#eceff1, 3.5%),
+  content-pre-background-color: #eceff1,
+  content-pre-border-background-color: rgba(12, 13, 14, 0.1),
+  content-pre-header-background-color: #e2e6e9,
   content-pre-header-color: #344952,
 );

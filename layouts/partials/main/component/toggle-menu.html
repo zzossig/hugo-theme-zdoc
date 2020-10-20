@@ -1,5 +1,5 @@
 {{ if $.Param "enableWideBlogSwitch" }}
-  <label class="switch switch__abs">
+  <label class="switch switch__abs" data-dir="{{ $.Param "languagedir" | default "ltr" }}">
     {{ if ($.Param "wideViewAsDefault") }}
       <input id="toggle-menu" aria-label="Toggle Menu Visibility" type="checkbox" />
       <span class="slider">

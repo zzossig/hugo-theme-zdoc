@@ -42,9 +42,11 @@ $light: (
   single-hr-background-color: #bdbdbd,
   single-blockquote-border-color: #bdbdbd,
   single-header-title-background-color: #eee,
-  single-contents-title-color: #607d8b,
+  single-contents-title-color: lighten(#424242, 4%),
   expand-background-color: #f7f8f9,
   expand-background-color-hover: darken(#f7f8f9, 3%),
   tag-num-background-color: #bdbdbd,
   tag-text-background-color: #eee,
+  content-box-border-color: #aaa,
+  content-box-background-color: #eeeeee,
 );
