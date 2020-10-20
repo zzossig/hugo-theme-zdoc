@@ -3,9 +3,9 @@
 
   &__links {
     position: absolute;
-    top: 0;
+    top: 2px;
     left: 0;
-    height: 27px;
+    height: 26px;
     z-index: z('clipboard');
     border-top-left-radius: 0.25rem;
 
@@ -18,7 +18,7 @@
   }
 
   &__link {
-    height: 27px;
+    height: 26px;
     border: none;
     outline: none;
     cursor: pointer;
