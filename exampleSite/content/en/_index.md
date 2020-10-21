@@ -1,30 +1,127 @@
 ---
-title: ZDoc
-description: Hugo ZDoc theme landing page
+title: Zdoc
+description: Hugo zdoc theme demo site
 date: 2020-01-26T04:15:05+09:00
 draft: false
-updatesBanner: "Banner - &nbsp; [Hugo ZDoc theme](https://github.com/zzossig/hugo-theme-zdoc) &nbsp; just arrived"
-landingImage: favicon/android-icon-192x192.png
-landingTitle:
-  - Hugo ZDoc theme
-landingText:
-  - Make a documentation with hugo zdoc theme!
-titleColor:
-textColor:
-spaceBetweenTitleText: 25
-buttons:
-  - link: docs/gettingstarted/quickstart
-    text: GET STARTED
-    color: primary
-  - link: https://github.com/zzossig/hugo-theme-zdoc
-    text: DOWNLOAD
-    color: default
-# shields:
-  # - link: https://github.com/zzossig/hugo-theme-zdoc
-  #   image: https://img.shields.io/github/forks/zzossig/hugo-theme-zdoc?label=Fork&style=social
-  #   alt: Hugo ZDoc theme github forks
-  # - link: https://github.com/zzossig/hugo-theme-zdoc
-  #   image: https://img.shields.io/github/stars/zzossig/hugo-theme-zdoc?label=Star&style=social
-  #   alt: Hugo ZDoc theme github stars
----
+# updatesBanner: "Banner - &nbsp; [Hugo ZDoc theme](https://github.com/zzossig/hugo-theme-zdoc) &nbsp; just arrived"
+landing:
+  height: 500
+  image: favicon/android-icon-192x192.png
+  title:
+    - Zdoc
+  text:
+    - Hugo zdoc theme demo site
+  titleColor:
+  textColor:
+  spaceBetweenTitleText: 25
+  buttons:
+    - link: docs
+      text: Explore Zdoc
+      color: primary
+  # backgroundImage: 
+  #   src: images/landscape.jpg
+  #   height: 600
+footer:
+  sections:
+    - title: General
+      links:
+        - title: Docs
+          link: https://gohugo.io/
+        - title: Learn
+          link: https://gohugo.io/
+        - title: Showcase
+          link: https://gohugo.io/
+        - title: Blog
+          link: https://gohugo.io/
+    - title: resources
+      links:
+        - title: GitHub
+          link: https://gohugo.io/
+        - title: Releases
+          link: https://gohugo.io/
+        - title: Spectrum
+          link: https://gohugo.io/
+        - title: Telemetry
+          link: https://gohugo.io/
+    - title: Features
+      links:
+        - title: GitHub
+          link: https://gohugo.io/
+        - title: Releases
+          link: https://gohugo.io/
+        - title: Spectrum
+          link: https://gohugo.io/
+        - title: Telemetry
+          link: https://gohugo.io/
+  contents: 
+    align: left
+    applySinglePageCss: false
+    markdown:
+      |
+      ## Zdoc docs
+      Copyright © 2020. All rights reserved.
 
+sections:
+  - bgcolor: teal
+    type: card
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id eleifend erat. Integer eget mattis augue. Suspendisse semper laoreet tortor sed convallis. Nulla ac euismod lorem"
+    header: 
+      title: Why Zdoc
+      hlcolor: "#8bc34a"
+      color: '#fff'
+      fontSize: 32
+      width: 220
+    cards:
+      - subtitle: Performance
+        subtitlePosition: center
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id eleifend erat. Integer eget mattis augue."
+        image: images/section/keyboard.png
+        color: white
+        button: 
+          name: Naver
+          link: https://gohugo.io/
+          size: large
+          target: _blank
+          color: 'white'
+          bgcolor: '#283593'
+      - subtitle: Reliability
+        subtitlePosition: center
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id eleifend erat. Integer eget mattis augue. Suspendisse semper laoreet tortor sed convallis. Nulla ac euismod lorem"
+        image: images/section/processor.png
+        color: white
+        button: 
+          name: Google
+          link: https://gohugo.io/
+          size: large
+          target: _blank
+          color: 'white'
+          bgcolor: '#283593'
+      - subtitle: Productivity
+        subtitlePosition: center
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id eleifend erat. Integer eget mattis augue. Suspendisse semper laoreet tortor sed convallis. Nulla ac euismod lorem"
+        image: images/section/root-server.png
+        color: white
+        button: 
+          name: Yahoo
+          link: https://gohugo.io/
+          size: large
+          target: _blank
+          color: 'white'
+          bgcolor: '#283593'
+  - bgcolor: DarkSlateBlue
+    type: normal
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id eleifend erat. Integer eget mattis augue. Suspendisse semper laoreet tortor sed convallis. Nulla ac euismod lorem"
+    header:
+      title: Build it with Zdoc
+      hlcolor: DarkKhaki
+      color: "#fff"
+      fontSize: 32
+      width: 340
+    body:
+      subtitle: Extensible and customizable.
+      subtitlePosition: left
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id eleifend erat. Integer eget mattis augue. Suspendisse semper laoreet tortor sed convallis. Nulla ac euismod lorem"
+      color: white
+      image: images/section/root-server.png
+      imagePosition: left
+---

@@ -2,16 +2,19 @@
 author = "Hugo Authors"
 title = "Markdown Syntax Guide"
 date = "2019-03-11"
-description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+# description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
 tags = [
     "markdown",
     "css",
     "html",
     "themes",
 ]
-tocLevels = ["h2", "h3", "h4", "h5"]
-
 +++
+
+Lorem est tota propiore conpellat pectoribus de
+pectora summo. Redit teque digerit hominumque toris verebor lumina non cervice
+subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc
+caluere tempus<!--more-->
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
 <!--more-->
@@ -37,12 +40,12 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
 
-### Blockquote without attribution
+#### Blockquote without attribution
 
 > Tiam, ad mint andaepu dandae nostion secatur sequo quae.
 > **Note** that you can use *Markdown syntax* within a blockquote.
 
-### Blockquote with attribution
+#### Blockquote with attribution
 
 > Don't communicate by sharing memory, share memory by communicating.</p>
 > — <cite>Rob Pike[^1]</cite>

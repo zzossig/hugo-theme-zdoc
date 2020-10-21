@@ -7,8 +7,11 @@
       var owner = JSON.parse({{ $owner | jsonify }});
       {{ $repo:= .Site.Params.utterances.repo }}
       var repo = JSON.parse({{ $repo | jsonify }});
+      {{ $baseTheme:= index .Site.Params.themeOptions 0 }}
+      var baseTheme = JSON.parse({{ $baseTheme | jsonify }});
       var localTheme = localStorage.getItem('theme');
-      var utterTheme = localTheme === "dark" || localTheme === "hacker" ? 'photon-dark' : localTheme === 'kimbie' ? 'github-dark-orange' : 'github-light'
+      var currentTheme = localTheme || baseTheme;
+      var utterTheme = currentTheme === "dark" ? 'photon-dark' : 'github-light'
 
       var myScript = document.createElement('script');
       myScript.setAttribute('src', 'https://utteranc.es/client.js');

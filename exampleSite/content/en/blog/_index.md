@@ -23,7 +23,7 @@ header:
     imageSize: cover
     imageRepeat: no-repeat
     imagePosition: center
-    height: 370
+    height: 280
     paddingX: 50
     paddingY: 0
     align: center

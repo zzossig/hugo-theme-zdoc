@@ -2,6 +2,10 @@
 
 [https://zzo-docs.vercel.app/zdoc](https://zzo-docs.vercel.app/zdoc)
 
+## Hugo Theme Zdoc
+
+Zdoc is a documentation theme for Hugo. It looks simple and provide many shortcodes. Also, you can make a blog with it.
+
 ## ❤️ Sponsor
 
 Your support will be of great help in maintaining the project.
@@ -18,6 +22,9 @@ Your support will be of great help in maintaining the project.
 * Responsive design
 * Fast code highlighting
 * Blog support
+* Table Of Contents(toc)
+* Code Tab
+* Blog
 
 ## Minimum Hugo version
 
