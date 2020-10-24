@@ -29,3 +29,7 @@ Your support will be of great help in maintaining the project.
 ## Minimum Hugo version
 
 Hugo version 0.65.0 or higher is required.
+
+## Screenshot
+
+![Hugo Theme Zdoc Screenshot](images/screenshot.png)

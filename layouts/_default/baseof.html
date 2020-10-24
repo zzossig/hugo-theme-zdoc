@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ block "title" . }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
     {{ partial "head/scripts" . }}
-    {{ partialCached "head/styles" . }}
+    {{ partial "head/styles" . }}
     {{ partial "head/meta" . }}
     {{ partial "head/meta_json_ld" . }}
     {{ partial "head/services" . }}

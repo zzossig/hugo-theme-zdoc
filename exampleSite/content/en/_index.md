@@ -1,6 +1,6 @@
 ---
-title: Zdoc
-description: Hugo zdoc theme demo site
+title: Z Themes
+description: Hugo zzo, zdoc theme documentation home page
 date: 2020-01-26T04:15:05+09:00
 draft: false
 # updatesBanner: "Banner - &nbsp; [Hugo ZDoc theme](https://github.com/zzossig/hugo-theme-zdoc) &nbsp; just arrived"
@@ -8,15 +8,15 @@ landing:
   height: 500
   image: favicon/android-icon-192x192.png
   title:
-    - Zdoc
+    - Z Themes
   text:
-    - Hugo zdoc theme demo site
+    - This is Hugo Z Themes documentation site
   titleColor:
   textColor:
   spaceBetweenTitleText: 25
   buttons:
     - link: docs
-      text: Explore Zdoc
+      text: HUGO THEME ZDOC
       color: primary
   # backgroundImage: 
   #   src: images/landscape.jpg
@@ -58,7 +58,7 @@ footer:
     applySinglePageCss: false
     markdown:
       |
-      ## Zdoc docs
+      ## Zzo docs
       Copyright © 2020. All rights reserved.
 
 sections:

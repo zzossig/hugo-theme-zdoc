@@ -28,8 +28,10 @@
   {{ $active = or $active (in $currentURL $sectionName1) }}
   
   {{ if $ctx.Params.Collapsible }}
-  <span class="menu__title--collapse {{ if $active }}active{{ end }}" data-depth="{{ $depth }}">
-    {{ $ctx.Title }}
+  <li class="menu__title--collapse {{ if $active }}active{{ end }}" data-depth="{{ $depth }}">
+    <span class="menu__title--collapse-text">
+      {{ $ctx.Title }}
+    </span>
     <span
       class="menu__title--icon {{ if $active }}{{ if eq ($root.Param "languagedir") "rtl" }}downrtl{{ else }}down{{ end }}{{ else }}right{{ end }}">
       {{ if eq ($root.Param "languagedir") "rtl" }}
@@ -38,7 +40,7 @@
       {{ partial "svgs/arrow-right.svg" (dict "width" 22 "height" 22) }}
       {{ end }}
     </span>
-  </span>
+  </li>
   <ul class="menu__list {{ if $active }}active{{ else if (in $ctx.Permalink (print "/" $sectionName1 "/")) }}{{ end }}"
     data-data={{ print "/" $sectionName1 "/"}} data-link={{ .root.Permalink }}>
     {{ range $ctx.Pages.ByWeight }}
