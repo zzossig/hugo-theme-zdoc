@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="{{ $css.katex.url }}" integrity="{{$css.katex.sri }}" crossorigin="anonymous">
   <script defer src="{{ $js.katex.url }}" integrity="{{ $js.katex.sri }}" crossorigin="anonymous"></script>
   <script defer src="{{ $js.katex_auto_render.url }}" integrity="{{ $js.katex_auto_render.sri }}" crossorigin="anonymous"></script>
+  {{ if in .Params.Libraries "mhchem" }}
+    <script defer src="{{ $js.katex_mhchem.url }}" integrity="{{ $js.katex_mhchem.sri }}" crossorigin="anonymous"></script>
+  {{ end }}
 {{ end }}
 
 {{ if in .Params.Libraries "flowchartjs" }}
