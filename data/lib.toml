@@ -12,8 +12,8 @@
   url = "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
 
 [js.flowchartjs]
-  sri = "sha256-xghRsaOFJXNxT9sgANknngHh3FjUQWrJUae7GP+2Atc="
-  url = "https://cdn.jsdelivr.net/npm/flowchart.js@1.12.0/release/flowchart.min.js"
+  sri = "sha512-6QsSiIybtf8tuZ6xfjRTr2tdtw3Gp4q5RSCh2b6q9seoKEQmhAG1RrCA8F0kXTwivVxRVbp/YF3zOh8rvEAU7Q=="
+  url = "https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.15.0/flowchart.min.js"
 
 [js.raphael]
   sri = "sha256-TabprKdeNXbSesCWLMrcbWSDzUhpAdcNPe5Q53rn9Yg="
