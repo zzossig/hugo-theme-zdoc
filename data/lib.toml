@@ -20,7 +20,7 @@
   url = "https://cdn.jsdelivr.net/npm/raphael@2.3.0/raphael.min.js"
 
 [js.mathjax]
-  url = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js"
+  url = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js"
 
 [js.chart]
   sri = "sha256-t9UJPrESBeG2ojKTIcFLPGF7nHi2vEc7f5A2KpH/UBU="
