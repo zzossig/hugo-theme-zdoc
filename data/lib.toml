@@ -12,8 +12,8 @@
   url = "https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/contrib/auto-render.min.js"
 
 [js.katex_mhchem]
-  sri = "sha256-yzSfYeVsWJ1x+2g8CYHsB/Mn7PcSp8122k5BM4T3Vxw="
-  url = "https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/mhchem.min.js"
+  sri = "sha384-LIgAiYlGSAdpNC9+YDjDPF6JeS/RRIumtNo0CmyQERZ/+g0h9MbuYQwf/5pQ4Y4M"
+  url = "https://cdn.jsdelivr.net/npm/katex@0.13.2/dist/contrib/mhchem.min.js"
 
 [js.flowchartjs]
   sri = "sha512-6QsSiIybtf8tuZ6xfjRTr2tdtw3Gp4q5RSCh2b6q9seoKEQmhAG1RrCA8F0kXTwivVxRVbp/YF3zOh8rvEAU7Q=="
